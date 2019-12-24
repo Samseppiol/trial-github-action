@@ -14,9 +14,9 @@ jobs:
       with:
         ruby-version: 2.5.x
     - name: Install cfhighlander gem
-      run: |
+      runs: |
         gem install cfhighlander
         cfndsl -u 9.0.0
     - name: Run highlander tests
-      run: |
+      runs: |
         cfhighlander cftest --no-validate
