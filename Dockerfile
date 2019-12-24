@@ -24,4 +24,7 @@ RUN cfndsl -u ${CFNDSL_SPEC_VERSION}
 # required for any calls via aws sdk
 ENV AWS_REGION us-east-1
 
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
 CMD 'cfhighlander'
