@@ -1,22 +1,6 @@
 name: samseppiol/trial
 description: Github action for theonestack/cfhighlander builds
-on: [push]
 
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v1
-    - name: Set up Ruby 2.5
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.5.x
-    - name: Install cfhighlander gem
-      runs: |
-        gem install cfhighlander
-        cfndsl -u 9.0.0
-    - name: Run highlander tests
-      runs: |
-        cfhighlander cftest --no-validate
+runs:
+  using: 'docker'
+  image: 'dockerfile'
