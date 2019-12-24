@@ -1,1 +1,2 @@
 
+cfhighlander cftest --no-validate
