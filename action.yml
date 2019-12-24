@@ -1,5 +1,5 @@
 name: samseppiol/trial
-
+description: Github action for theonestack/cfhighlander builds
 on: [push]
 
 jobs:
